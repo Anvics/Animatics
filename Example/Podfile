@@ -1,0 +1,6 @@
+use_frameworks!
+target 'Animatics_Tests' do
+  pod 'Animatics', :path => '../'
+  
+  
+end

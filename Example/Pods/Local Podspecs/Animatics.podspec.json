@@ -1,0 +1,22 @@
+{
+  "name": "Animatics",
+  "version": "0.1.0",
+  "summary": "A short description of Animatics.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/hip4yes/Animatics",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hip4yes": "narhipov92@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/hip4yes/Animatics.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Animatics/Classes/**/*"
+}

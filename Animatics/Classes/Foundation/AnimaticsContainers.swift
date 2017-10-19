@@ -212,7 +212,7 @@ final public class EndlessAnimator: AnimaticsReady, AnimaticsSettingsSettersWrap
 
 }
 
-extension AnimaticsReady{
+public extension AnimaticsReady{
     public func endless() -> EndlessAnimator { return EndlessAnimator(self) }
 }
 

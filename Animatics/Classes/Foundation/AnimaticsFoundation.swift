@@ -26,7 +26,7 @@ public protocol Animatics: AnimaticsSettingsHolder, AnimaticsTargetWaiter{
     func _currentValue(_ target: TargetType) -> ValueType
 }
 
-extension Animatics{
+public extension Animatics{
     public func to(_ target: TargetType) -> AnimaticsReady{ return AnimationReady(animator: self, target: target) }
     
     public func animaticsReadyCreator() -> (TargetType) -> AnimaticsReady{ return to }
@@ -40,9 +40,9 @@ public protocol AnimaticsReady: AnimaticsSettingsSetter {
     func withCompletionBlock(_ block: @escaping AnimaticsEmptyBlock) -> AnimaticsReady
 }
 
-extension AnimaticsReady{
-    func animate(){ animateWithCompletion(nil) }
-    func animateWithCompletion(_ completion: AnimaticsEmptyBlock?){ animateWithCompletion(emptyBlock(completion, type: Bool.self)) }
+public extension AnimaticsReady{
+    public func animate(){ animateWithCompletion(nil) }
+    public func animateWithCompletion(_ completion: AnimaticsEmptyBlock?){ animateWithCompletion(emptyBlock(completion, type: Bool.self)) }
 }
 
 final public class AnimationReady<T: Animatics>: AnimaticsReady, AnimaticsSettingsSettersWrapper {

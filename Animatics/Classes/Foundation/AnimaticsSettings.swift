@@ -80,7 +80,7 @@ public protocol AnimaticsSettingsSettersWrapper: AnimaticsSettingsSetter {
     func getSettingsSetters() -> [AnimaticsSettingsSetter]
 }
 
-extension AnimaticsSettingsSettersWrapper{
+public extension AnimaticsSettingsSettersWrapper{
     public func duration(_ d: TimeInterval) -> Self{
         for s in getSettingsSetters(){ _ = s.duration(d) }
         return self

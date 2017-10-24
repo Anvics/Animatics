@@ -20,14 +20,17 @@ public class Filter{
         }
     }
     
-    public static func Saturation(_ saturation: CGFloat) -> Applyer{
+    public static func Saturation(_ saturation: CGFloat = 1, brightness: CGFloat = 1, contrast: CGFloat = 1) -> Applyer{
         let filter = CIFilter(name: "CIColorControls")!
         filter.setValue(saturation, forKey: kCIInputSaturationKey)
+        filter.setValue(brightness, forKey: kCIInputBrightnessKey)
+        filter.setValue(contrast, forKey: kCIInputContrastKey)
         return { image in
             filter.setValue(image, forKey: kCIInputImageKey)
             return filter.outputImage!
         }
     }
+    
 }
 
 public func +(left: @escaping Filter.Applyer, right: @escaping Filter.Applyer) -> Filter.Applyer{

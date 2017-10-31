@@ -209,7 +209,6 @@ final public class EndlessAnimator: AnimaticsReady, AnimaticsSettingsSettersWrap
     public func withCompletionBlock(_ block: @escaping () -> ()) -> AnimaticsReady {
         return self
     }
-
 }
 
 public extension AnimaticsReady{
@@ -224,11 +223,11 @@ public func |->(left: AnimaticsReady, right: AnimaticsReady) -> AnimaticsReady{
     return SequentialAnimations(firstAnimator: left, secondAnimator: right)
 }
 
-public func +<T: AnimaticsTargetWaiter, U: AnimaticsTargetWaiter>(left: T, right: U) -> SimultaneousAnimationsTargetWaiter<T, U> where T.TargetType == U.TargetType{
+public func +<T: AnimaticsTargetWaiter, U: AnimaticsTargetWaiter>(left: T, right: U) -> SimultaneousAnimationsTargetWaiter<T, U>{
     return SimultaneousAnimationsTargetWaiter(firstAnimator: left, secondAnimator: right)
 }
 
-public func |-><T: AnimaticsTargetWaiter, U: AnimaticsTargetWaiter>(left: T, right: U) -> SequentialAnimationsTargetWaiter<T, U> where T.TargetType == U.TargetType{
+public func |-><T: AnimaticsTargetWaiter, U: AnimaticsTargetWaiter>(left: T, right: U) -> SequentialAnimationsTargetWaiter<T, U>{
     return SequentialAnimationsTargetWaiter(firstAnimator: left, secondAnimator: right)
 }
 

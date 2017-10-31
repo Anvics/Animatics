@@ -14,12 +14,12 @@
 /* Begin PBXFileReference section */
 		1E9B77E09F517FA9B0E802C4 /* Pods-Animatics_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animatics_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animatics_Tests/Pods-Animatics_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		38F7F8F0974FD681A9CCBC40 /* Pods-Animatics_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animatics_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animatics_Tests/Pods-Animatics_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4C5C16F87E43741FE874B336 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4C5C16F87E43741FE874B336 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* Animatics_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Animatics_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		91F0C0D31777BB2DBF011849 /* Animatics.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Animatics.podspec; path = ../Animatics.podspec; sourceTree = "<group>"; };
-		B56E9820F0EFB341A8C4C01A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		91F0C0D31777BB2DBF011849 /* Animatics.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Animatics.podspec; path = ../Animatics.podspec; sourceTree = "<group>"; };
+		B56E9820F0EFB341A8C4C01A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F2AC56B5D4EC404F0A89544E /* Pods_Animatics_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animatics_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,12 +131,9 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7Q8Y2NR2VG;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -339,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E9B77E09F517FA9B0E802C4 /* Pods-Animatics_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7Q8Y2NR2VG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -360,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38F7F8F0974FD681A9CCBC40 /* Pods-Animatics_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7Q8Y2NR2VG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

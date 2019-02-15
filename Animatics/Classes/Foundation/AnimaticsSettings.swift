@@ -14,7 +14,7 @@ public typealias AnimaticsCompletionBlock = (Bool) -> Void
 public protocol AnimaticsSettingsSetter{
     func duration(_ d: TimeInterval) -> Self
     func delay(_ d: TimeInterval) -> Self
-    func baseAnimation(_ o: UIViewAnimationOptions) -> Self
+    func baseAnimation(_ o: UIView.AnimationOptions) -> Self
     func springAnimation(_ dumping: CGFloat, velocity: CGFloat) -> Self
     
     func getDuration() -> TimeInterval
@@ -23,7 +23,7 @@ public protocol AnimaticsSettingsSetter{
 public protocol AnimaticsSettingsHolder: AnimaticsSettingsSetter{
     var _duration: TimeInterval { get set }
     var _delay: TimeInterval  { get set }
-    var _animationOptions: UIViewAnimationOptions { get set }
+    var _animationOptions: UIView.AnimationOptions { get set }
     var _isSpring: Bool { get set }
     var _springDumping: CGFloat { get set }
     var _springVelocity: CGFloat { get set }
@@ -34,7 +34,7 @@ public protocol AnimaticsSettingsHolder: AnimaticsSettingsSetter{
 public class AnimationSettingsHolder: AnimaticsSettingsHolder{
     public var _duration: TimeInterval = 0.35
     public var _delay: TimeInterval = 0
-    public var _animationOptions: UIViewAnimationOptions = UIViewAnimationOptions()
+    public var _animationOptions: UIView.AnimationOptions = UIView.AnimationOptions()
     public var _isSpring: Bool = true
     public var _springDumping: CGFloat = 0.8
     public var _springVelocity: CGFloat = 0
@@ -50,7 +50,7 @@ public class AnimationSettingsHolder: AnimaticsSettingsHolder{
         return self
     }
     
-    public func baseAnimation(_ o: UIViewAnimationOptions = UIViewAnimationOptions()) -> Self{
+    public func baseAnimation(_ o: UIView.AnimationOptions = UIView.AnimationOptions()) -> Self{
         _isSpring = false
         _animationOptions = o
         return self
@@ -91,7 +91,7 @@ public extension AnimaticsSettingsSettersWrapper{
         return self
         
     }
-    public func baseAnimation(_ o: UIViewAnimationOptions = UIViewAnimationOptions()) -> Self{
+    public func baseAnimation(_ o: UIView.AnimationOptions = UIView.AnimationOptions.curveEaseInOut) -> Self{
         for s in getSettingsSetters(){ _ = s.baseAnimation(o) }
         return self
     }
